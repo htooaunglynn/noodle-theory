@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Noodle Theory AI Context Files
 
-## Getting Started
+This folder contains the project context documents for building the **Noodle Theory** restaurant landing page with an AI code editor such as Codex.
 
-First, run the development server:
+The goal of these files is to keep the AI agent focused, consistent, and fast during the 60-minute build. Before writing code, the agent should read these files and follow them as the source of truth.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Project Summary
+
+**Noodle Theory** is a fictional ramen shop landing page built with:
+
+- Next.js 16
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Base component style
+- Sera visual direction
+- GitHub
+- Vercel
+
+The landing page must include:
+
+1. Hero section
+2. Menu section with at least 8 items
+3. Location section with address and map-style layout
+4. Contact / CTA section with hours, phone number, and Order Now button
+5. Mobile-responsive design
+6. Live deployment on Vercel
+
+## Recommended Folder Structure
+
+Place these files inside a `context/` folder in the project root:
+
+```txt
+context/
+├── README.md
+├── project-overview.md
+├── architecture.md
+├── code-standards.md
+├── ai-workflow-rules.md
+├── ui-context.md
+└── progress-tracker.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How to Use These Files
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Read `project-overview.md` First
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This file explains what the project is, who it is for, what sections are required, what is in scope, and what success means.
 
-## Learn More
+Use this file when the AI needs to understand the product goal.
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Read `architecture.md`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This file explains the technical structure of the project.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Use it to understand:
 
-## Deploy on Vercel
+- Tech stack
+- Folder responsibilities
+- Deployment model
+- System boundaries
+- Rules the codebase must not break
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 3. Read `ui-context.md`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This file explains the visual style of the landing page.
+
+Use it when building:
+
+- Colors
+- Typography
+- Spacing
+- Cards
+- Buttons
+- Mobile layout
+- shadcn/ui components
+
+### 4. Read `code-standards.md`
+
+This file explains coding rules.
+
+Use it to keep the project clean, consistent, and easy to maintain.
+
+### 5. Read `ai-workflow-rules.md`
+
+This file explains how the AI coding agent should work.
+
+Use it to avoid:
+
+- Building too much at once
+- Changing unrelated files
+- Guessing missing requirements
+- Forgetting to update progress
+
+### 6. Update `progress-tracker.md`
+
+This file tracks current project status.
+
+Update it after meaningful changes, such as:
+
+- Project setup complete
+- Landing page sections complete
+- Mobile responsive check complete
+- Build passes
+- Deployment complete
+- PR merged
+
+## Suggested AI Agent Start Prompt
+
+Use this prompt in Codex or another AI code editor:
+
+```txt
+Read all files inside the context/ folder before making changes.
+
+Build the Noodle Theory landing page exactly according to the context files.
+
+Start with project setup and landing page implementation.
+Use Next.js 16, TypeScript, Tailwind CSS, and shadcn/ui.
+Use Base component style and follow the Sera visual direction.
+
+Work on the feat/landing-page branch.
+Do not add backend, database, authentication, CMS, payment, or real ordering features.
+After each meaningful change, update context/progress-tracker.md.
+```
