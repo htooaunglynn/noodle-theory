@@ -108,7 +108,7 @@ Update it after meaningful changes, such as:
 
 ## Suggested AI Agent Start Prompt
 
-Use this prompt in Codex or another AI code editor:
+Use this prompt in Codex:
 
 ```txt
 Read all files inside the context/ folder before making changes.
